@@ -1,0 +1,25 @@
+<div class="mat-card-cvr"> 
+        <mat-card id="card" style="text-align:center;" class="example-card">
+                <mat-card-title>LOGIN </mat-card-title>
+        <mat-card-content>
+        
+        <div>
+            {{usermodel|json}}
+        </div>
+        
+        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+            <mat-label >Email</mat-label>
+            <input type="email" matInput required [(ngModel)]="usermodel.email">
+            </mat-form-field><br/>
+        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+            <mat-label >Password</mat-label>
+            <input type="password" matInput required [(ngModel)]="usermodel.password">
+            </mat-form-field><br/>
+        
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/home" routerLinkActive="active" mat-raised-button color="primary" style="margin-right:5px;"(click)="test()" > LOGIN </button>                                                                      
+            <button routerLink="/signup" routerLinkActive="active" mat-raised-button color="primary" style="margin-right:5px;"> REGISTER </button> 
+          </mat-card-actions>
+        </mat-card>
+        </div>

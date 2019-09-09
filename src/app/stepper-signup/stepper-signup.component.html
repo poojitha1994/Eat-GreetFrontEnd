@@ -1,0 +1,77 @@
+<mat-horizontal-stepper linear> 
+        <mat-step label ="General Details" optional>
+                <div class="mat-card-cvr"> 
+                        <mat-card id="card" style="text-align:center;" class="example-card">
+                        
+                        <mat-card-content>
+                        
+                        
+                        
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Name</mat-label>
+                            <input matInput required [(ngModel)]="usermodel.name">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Email</mat-label>
+                            <input type="email" matInput required [(ngModel)]="usermodel.email">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Mobile No.</mat-label>
+                            <input type="tel" matInput required [(ngModel)]="usermodel.mobileno">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Password</mat-label>
+                            <input type="password" matInput required [(ngModel)]="usermodel.password">
+                            <mat-hint align="end">Min 8 characters</mat-hint>
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Retype Password</mat-label>
+                            <input type="password" matInput required>
+                            </mat-form-field><br/>
+                        
+                        </mat-card-content>
+                        
+                        </mat-card>
+                        </div>
+
+
+
+            <div> <button mat-button matStepperNext> Next</button> </div>
+        </mat-step>
+        <mat-step label ="Address" optional>
+                <!--  Address fields here... -->
+                <div class="mat-card-cvr"> 
+                        <mat-card id="card" style="text-align:center;" class="example-card">
+                        
+                        <mat-card-content>
+                        
+                        
+                        
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Address Line 1</mat-label>
+                            <input type="text" matInput required [(ngModel)]="usermodel.addressline1">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label>Address Line 2</mat-label>
+                            <input matInput type="text" required [(ngModel)]="usermodel.addressline2">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >Country</mat-label>
+                            <input type="text" matInput required [(ngModel)]="usermodel.Country">
+                            </mat-form-field><br/>
+                        <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+                            <mat-label >PostCode</mat-label>
+                            <input type="text" matInput required [(ngModel)]="usermodel.PostCode">
+                            </mat-form-field><br/>
+                        
+                        
+                        </mat-card-content>
+                        
+                        </mat-card>
+                        </div>
+                <div> <button mat-button matStepperPrevious> Back</button> </div>
+            </mat-step>
+    </mat-horizontal-stepper>
+    <div style="text-align: center;">
+    <button mat-raised-button color="primary" (click)="test()">REGISTER</button>
+</div>
